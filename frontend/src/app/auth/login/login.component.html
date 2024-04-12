@@ -1,13 +1,15 @@
-<ion-content >
+<ion-content color="light">
+  <p  style="text-align: center; font-size: 25px; margin: 4%" >
+    Cool logo
+  </p>
     <div style="display: flex; justify-content: center; align-items: center;">
-
-      <ion-card class="ion-padding" style="overflow: hidden; border-radius: 15px; max-width: 500px; width: 90%;">
+      <ion-card class="ion-padding" style=" max-width: 500px; width: 90%;">
         <ion-card-header class="ion-text-center">
           <h1>Sign in</h1>
         </ion-card-header>
 
-        <form (ngSubmit)="submit()" [formGroup]="form" >
 
+        <form (ngSubmit)="submit()" [formGroup]="form" >
           <ion-item >
             <ion-input formControlName="email" label="Email" labelPlacement="stacked" ></ion-input>
           </ion-item>
@@ -30,7 +32,7 @@
           <ion-checkbox class="ion-padding" labelPlacement="end">Remember me</ion-checkbox>
 
           <div class="ion-padding" style="display: flex; justify-content: center;">
-            <ion-button (click)="submit()" [disabled]="isAutofilled || form.invalid" id="btn-submit" size="large" color="warning">
+            <ion-button (click)="submit()" [disabled]="form.invalid" id="btn-submit" size="large" >
               Sign in
             </ion-button>
           </div>
